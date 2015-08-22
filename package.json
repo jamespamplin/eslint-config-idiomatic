@@ -1,0 +1,14 @@
+{
+  "name": "idomatic-eslint-config",
+  "version": "0.1.0",
+  "description": "ESLint config for idomatic js style",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "james@jamespamplin.com",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "~1.2.1"
+  }
+}
