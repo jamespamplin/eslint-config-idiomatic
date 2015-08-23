@@ -8,6 +8,20 @@ styleguide. These are outlined below.
 ### Strict Indent
 This config restricts to **2 spaces** soft indent and will error when indentation differs.
 
+### Warn on missing function names
+Names on functions are recommended as they will show in stack traces, which aids debugging immensely. `idomatic-eslint-config` will only issue a warning instead of an error when a function name is omitted, which is useful for anonymous functions.
+
+```js
+// Good (named function):
+function foo() { return 'bar'; }
+
+// Anonymous function (will issue warning):
+var foo = function() { return 'bar'; };
+
+// ES6 arrow function preferred for Anonymous functions (no warn, requires ES6+):
+let foo = () => 'bar';
+```
+
 ## TODO
 
 ### 2.A enforce multi-line blocks
