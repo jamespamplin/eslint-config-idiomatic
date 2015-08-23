@@ -1,5 +1,29 @@
 # eslint-config-idiomatic
-A shareable ESLint config for the [idiomatic js](https://github.com/rwaldron/idiomatic.js) coding style.
+> An [ESLint](http://eslint.org/) [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for the [idiomatic js](https://github.com/rwaldron/idiomatic.js) coding style.
+
+## Install
+```
+npm install --save-dev eslint-config-idiomatic
+```
+
+## Usage
+In your `.eslintrc` file:
+```json
+{
+  "extends": "idiomatic"
+}
+```
+
+### Overrides
+You can easily override rules in your own `.eslintrc` config. For example, to use 4 space indents instead of 2:
+```json
+{
+  "extends": "idiomatic",
+  "rules": {
+    "indent": [2, 4]
+  }
+}
+```
 
 ## Slight differences
 The rules enforces by this config may differ slightly from the idiomatic js
@@ -9,7 +33,7 @@ styleguide. These are outlined below.
 This config restricts to **2 spaces** soft indent and will error when indentation differs.
 
 ### Warn on missing function names
-Names on functions are recommended as they will show in stack traces, which aids debugging immensely. `idiomatic-eslint-config` will only issue a warning instead of an error when a function name is omitted, which is useful for anonymous functions.
+Names on functions are recommended as they will show in stack traces, which aids debugging immensely. `eslint-config-idiomatic` will only issue a warning instead of an error when a function name is omitted, which is useful for anonymous functions.
 
 ```js
 // Good (named function):
