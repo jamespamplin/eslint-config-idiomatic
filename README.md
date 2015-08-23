@@ -1,4 +1,7 @@
 # eslint-config-idiomatic
+[![NPM](https://img.shields.io/npm/v/eslint-config-idiomatic.svg)](https://www.npmjs.com/package/eslint-config-idiomatic)
+[![Build](https://img.shields.io/travis/jamespamplin/eslint-config-idiomatic.svg)](https://travis-ci.org/jamespamplin/eslint-config-idiomatic)
+
 > An [ESLint](http://eslint.org/) [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for the [idiomatic js](https://github.com/rwaldron/idiomatic.js) coding style.
 
 ## Install
