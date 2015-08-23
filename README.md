@@ -1,15 +1,15 @@
-# idomatic-eslint-config
-A shareable ESLint config for the [idomatic js](https://github.com/rwaldron/idiomatic.js) coding style.
+# eslint-config-idiomatic
+A shareable ESLint config for the [idiomatic js](https://github.com/rwaldron/idiomatic.js) coding style.
 
 ## Slight differences
-The rules enforces by this config may differ slightly from the idomatic js
+The rules enforces by this config may differ slightly from the idiomatic js
 styleguide. These are outlined below.
 
 ### Strict Indent
 This config restricts to **2 spaces** soft indent and will error when indentation differs.
 
 ### Warn on missing function names
-Names on functions are recommended as they will show in stack traces, which aids debugging immensely. `idomatic-eslint-config` will only issue a warning instead of an error when a function name is omitted, which is useful for anonymous functions.
+Names on functions are recommended as they will show in stack traces, which aids debugging immensely. `idiomatic-eslint-config` will only issue a warning instead of an error when a function name is omitted, which is useful for anonymous functions.
 
 ```js
 // Good (named function):
@@ -41,7 +41,7 @@ while ( true ) {
 }
 ```
 
-### 2.B enforce single variable declarations on a line
+### 2.B enforce single variable declarations on a new line
 
 ```js
 // Expect error:

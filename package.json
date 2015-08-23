@@ -1,15 +1,15 @@
 {
-  "name": "idomatic-eslint-config",
+  "name": "eslint-config-idiomatic",
   "version": "0.1.0",
-  "description": "ESLint config for the idomatic js style",
-  "keywords": ["idomatic", "eslint", "styleguide", "style", "guide"],
+  "description": "ESLint config for the idiomatic js style",
+  "keywords": ["idiomatic", "eslint", "eslintconfig", "styleguide", "style", "guide"],
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./test/*.spec.js",
     "test": "mocha -r ./test/support/support"
   },
   "author": "James Pamplin <james@jamespamplin.com> (http://jamespamplin.com)",
-  "repository": "https://github.com/jamespamplin/idomatic-eslint-config.git",
+  "repository": "https://github.com/jamespamplin/eslint-config-idiomatic.git",
   "license": "MIT",
   "devDependencies": {
     "eslint": "~1.2.1",
