@@ -4,6 +4,7 @@
   "description": "ESLint config for idomatic js style",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./test/*.spec.js",
     "test": "mocha"
   },
   "author": "james@jamespamplin.com",
