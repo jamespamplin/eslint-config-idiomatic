@@ -13,10 +13,14 @@ Names on functions are recommended as they will show in stack traces, which aids
 
 ```js
 // Good (named function):
-function foo() { return 'bar'; }
+function foo() {
+  return 'bar';
+}
 
 // Anonymous function (will issue warning):
-var foo = function() { return 'bar'; };
+var foo = function() {
+  return 'bar';
+};
 
 // ES6 arrow function preferred for Anonymous functions (no warn, requires ES6+):
 let foo = () => 'bar';
@@ -24,20 +28,18 @@ let foo = () => 'bar';
 
 ## TODO
 
-### 2.A enforce multi-line blocks
-Haven't figured out how to force multi-line blocks yet.
+### 2.A enforce end of block brace on new line
 
 ```js
 // Expect error:
-if ( condition ) { /* single line block statements */ }
+while ( true ) {
+  i++; }
 
 // Good:
-if ( condition ) {
-  // statements
+while ( true ) {
+  i++;
 }
 ```
-
-Using `block-spacing` rule to force spacing on single line blocks for now.
 
 ### 2.B enforce single variable declarations on a line
 

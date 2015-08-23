@@ -4,6 +4,8 @@
   "rules": {
     "indent": [2, 2],
     "block-spacing": [2, "always"],
+    "brace-style": [2, "1tbs", { "allowSingleLine": false }],
+    "curly": [2, "all"],
     "func-names": [1],
     "no-func-assign": [2],
     "no-mixed-spaces-and-tabs": [2],
