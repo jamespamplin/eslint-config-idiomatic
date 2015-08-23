@@ -1,5 +1,8 @@
 var CLIEngine = require('eslint').CLIEngine;
-var cli = new CLIEngine();
+var cli = new CLIEngine({
+  useEslintrc: false,
+  rules: require('../index').rules
+});
 
 var expect = require('chai').expect;
 
