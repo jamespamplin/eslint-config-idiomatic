@@ -57,10 +57,7 @@ describe( '2. Beautiful Syntax', function() {
       '  var second; //not declared at the top\n' +
       '}';
 
-      var report = eslint.executeOnText( src );
-
-      expect( report.results[0].errorCount ).to.equal( 1 );
-      expect( report.results[0].messages[0].ruleId ).to.equal( 'vars-on-top' );
+      expect( src ).to.have.eslintErrors( [ 'vars-on-top' ] );
 
     } );
 
