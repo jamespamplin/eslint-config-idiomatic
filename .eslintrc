@@ -4,6 +4,7 @@
   "rules": {
     "indent": [2, 2],
     "semi-spacing": [2, {"before": false, "after": true}],
+    "space-after-keywords": [2],
     "no-mixed-spaces-and-tabs": [2]
   }
 }
