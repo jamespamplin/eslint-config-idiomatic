@@ -1,23 +1,23 @@
-var eslint = require('./support/eslint-adapter');
+var eslint = require( './support/eslint-adapter' );
 
-var expect = require('chai').expect;
+var expect = require( 'chai' ).expect;
 
 describe( '1. Whitespace', function() {
 
   it( 'should use 2 spaces for indent', function() {
 
-    var report = eslint.executeOnText('if ( true ) {\n  var test = "fail"; }');
+    var report = eslint.executeOnText( 'if ( true ) {\n  var test = "fail"; }' );
 
-    expect(report.results[0].errorCount).to.equal(0);
+    expect( report.results[0].errorCount ).to.equal( 0 );
 
   } );
 
 
   it( 'should fail when 2 spaces are not used for indentation', function() {
 
-    var report = eslint.executeOnText('if ( true ) {\n\tvar test = "fail"; }');
+    var report = eslint.executeOnText( 'if ( true ) {\n\tvar test = "fail"; }' );
 
-    expect(report.results[0].errorCount).to.equal(1);
+    expect( report.results[0].errorCount ).to.equal( 1 );
 
   } );
 
@@ -33,7 +33,7 @@ describe( '1. Whitespace', function() {
       '}\n'
     );
 
-    expect(report.results[0].errorCount).to.equal(2);
+    expect( report.results[0].errorCount ).to.equal( 2 );
 
   } );
 
