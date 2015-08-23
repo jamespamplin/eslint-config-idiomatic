@@ -50,14 +50,20 @@ describe( '2. Beautiful Syntax', function() {
     it( 'should fail when variables are not declared at top of scope', function() {
 
       var src = 'function doSomething() {\n' +
-      '  var first;\n' +
       '  if ( true ) {\n' +
       '    first = true;\n' +
       '  }\n' +
-      '  var second; //not declared at the top\n' +
+      '  var first;\n' +
       '}';
 
       expect( src ).to.have.eslintErrors( [ 'vars-on-top' ] );
+
+    } );
+
+    it( 'should fail when more than 1 var per scope', function() {
+
+      var src = 'var first;\nvar second = \'\';';
+      expect( src ).to.have.eslintErrors( [ 'one-var' ] );
 
     } );
 

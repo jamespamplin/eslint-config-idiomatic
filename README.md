@@ -24,3 +24,15 @@ if ( condition ) {
 ```
 
 Using `block-spacing` rule to force spacing on single line blocks for now.
+
+### 2.B enforce single variable declarations on a line
+
+```js
+// Expect error:
+var foo = "bar", num = 1;
+
+// Good:
+var foo = "bar",
+  num = 1,
+  undef;
+```
