@@ -1,38 +1,27 @@
 var eslint = require( './support/eslint-adapter' );
-var expect = require( 'chai' ).expect;
-
 
 describe( '2. Beautiful Syntax', function() {
 
   describe( 'A. Parens, Braces, Linebreaks', function() {
 
     it( 'should fail when cramped syntax around keywords', function() {
-      var report = eslint.executeOnText( 'while( true ) i++;' );
-
-      expect( report.results[0].errorCount ).to.equal( 1 );
-      expect( report.results[0].messages[0].ruleId ).to.equal( 'space-after-keywords' );
+      var src = 'while( true ) i++;';
+      expect( src ).to.have.eslintErrors( [ 'space-after-keywords' ] );
     } );
 
     it( 'should fail when no space before block', function() {
-      var report = eslint.executeOnText( 'while ( true ){ i++; }' );
-
-      expect( report.results[0].errorCount ).to.equal( 1 );
-      expect( report.results[0].messages[0].ruleId ).to.equal( 'space-before-blocks' );
+      var src = 'while ( true ){ i++; }';
+      expect( src ).to.have.eslintErrors( [ 'space-before-blocks' ] );
     } );
 
     it( 'should fail when no spacing inside block', function() {
-      var report = eslint.executeOnText( 'while ( true ) {i++; }' );
-
-      expect( report.results[0].errorCount ).to.equal( 1 );
-      expect( report.results[0].messages[0].ruleId ).to.equal( 'block-spacing' );
+      var src = 'while ( true ) {i++; }';
+      expect( src ).to.have.eslintErrors( [ 'block-spacing' ] );
     } );
 
     it( 'should fail when cramped syntax inside parentheses', function() {
-      var report = eslint.executeOnText( 'var i;\nfor (i=0; i<100; i++) someIterativeFn();' );
-
-      expect( report.results[0].errorCount ).to.equal( 2 );
-      expect( report.results[0].messages[0].ruleId ).to.equal( 'space-in-parens' );
-      expect( report.results[0].messages[1].ruleId ).to.equal( 'space-in-parens' );
+      var src = 'var i;\nfor (i=0; i<100; i++) someIterativeFn();';
+      expect( src ).to.have.eslintErrors( [ 'space-in-parens', 'space-in-parens' ] );
     } );
 
     it.skip( 'should show no errors or warnings on idomatic source', function() {
