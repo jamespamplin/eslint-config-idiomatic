@@ -20,6 +20,13 @@ describe( '2. Beautiful Syntax', function() {
       expect( report.results[0].messages[0].ruleId ).to.equal( 'space-before-blocks' );
     } );
 
+    it( 'should fail when no spacing inside block', function() {
+      var report = eslint.executeOnText( 'while ( true ) {i++; }' );
+
+      expect( report.results[0].errorCount ).to.equal( 1 );
+      expect( report.results[0].messages[0].ruleId ).to.equal( 'block-spacing' );
+    } );
+
     it( 'should fail when cramped syntax inside parentheses', function() {
       var report = eslint.executeOnText( 'for (var i=0; i<100; i++) someIterativeFn();' );
 
