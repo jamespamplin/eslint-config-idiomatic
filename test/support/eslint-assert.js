@@ -5,17 +5,18 @@
  *  - expect(src).to.not.have.eslintErrors
  */
 
-var Assertion = require( 'chai' ).Assertion;
+var Assertion = require( 'chai' ).Assertion,
+  eslint = require( './eslint-adapter' );
 
-var eslint = require( './eslint-adapter' );
-var eslintFormatter = eslint.getCompactFormatter();
 
 // from deep-eql, compare 2 iterables for equality
 function iterableEqual( a, b ) {
-  var i = 0;
-  var match = true;
+  var i = 0,
+    match = true;
 
-  if ( a.length !==  b.length ) return false;
+  if ( a.length !==  b.length ) {
+    return false;
+  }
 
   for ( ; i < a.length; i++ ) {
     if ( a[i] !== b[i] ) {
@@ -37,8 +38,10 @@ Assertion.addMethod( 'eslintErrors', function ( expectedRules ) {
   report = eslint.executeOnText( obj );
   results = report.results[0] || {};
 
-  messages = eslintFormatter( report.results );
-  resultRules = results.messages.map( function( m ) { return m.ruleId; } );
+  messages = eslint.formatReportResults( report.results );
+  resultRules = results.messages.map( function( m ) {
+    return m.ruleId;
+  } );
 
   this.assert(
     report.errorCount > 0 && Array.isArray( results.messages ) &&

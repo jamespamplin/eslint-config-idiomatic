@@ -1,5 +1,3 @@
-var eslint = require( './support/eslint-adapter' );
-
 describe( '2. Beautiful Syntax', function() {
 
   describe( 'A. Parens, Braces, Linebreaks', function() {
@@ -32,25 +30,6 @@ describe( '2. Beautiful Syntax', function() {
     it( 'should fail when cramped syntax inside parentheses', function() {
       var src = 'var i;\nfor (i=0; i<100; i++) {\n  someIterativeFn();\n}';
       expect( src ).to.have.eslintErrors( [ 'space-in-parens', 'space-in-parens' ] );
-    } );
-
-    it.skip( 'should show no errors or warnings on idomatic source', function() {
-
-      var report = eslint.executeOnFiles( ['./test/fixtures/2.A.1.1.js'] );
-
-      expect( report.results[0].errorCount ).to.equal( 0 );
-      expect( report.results[0].warningCount ).to.equal( 0 );
-
-    } );
-
-
-    it.skip( 'should show errors on non-idomatic source', function() {
-
-      var report = eslint.executeOnFiles( ['./test/fixtures/2.A.1.1.bad.js'] );
-
-      expect( report.results[0].errorCount ).to.not.equal( 0 );
-      expect( report.results[0].warningCount ).to.equal( 0 );
-
     } );
 
   } );
