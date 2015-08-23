@@ -32,6 +32,11 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'space-in-parens', 'space-in-parens' ] );
     } );
 
+    it( 'should fail when no spacing inside array literal', function() {
+      var src = 'var a = [\'foo\', \'bar\'];';
+      expect( src ).to.have.eslintErrors( [ 'array-bracket-spacing', 'array-bracket-spacing' ] );
+    } );
+
   } );
 
   describe( 'B. Assignments, Declarations, Functions ( Named, Expression, Constructor )', function() {

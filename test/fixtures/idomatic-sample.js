@@ -46,7 +46,11 @@ function style2A113() {
   } else {
     // statements
   }
+}
 
+function style2A114() {
+  var a = [ 'foo', 'bar' ];
+  return a;
 }
 
 

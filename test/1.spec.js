@@ -13,7 +13,7 @@ describe( '1. Whitespace', function() {
 
     var src = 'var test;\nif ( true ) {\n\ttest = "fail"; }';
 
-    expect( src ).to.have.eslintErrors( ['indent'] );
+    expect( src ).to.have.eslintErrors( [ 'indent' ] );
 
   } );
 
@@ -29,7 +29,7 @@ describe( '1. Whitespace', function() {
       '  }\n' +
       '}\n';
 
-    expect( src ).to.have.eslintErrors( ['no-mixed-spaces-and-tabs', 'indent' ] );
+    expect( src ).to.have.eslintErrors( [ 'no-mixed-spaces-and-tabs', 'indent' ] );
 
   } );
 
