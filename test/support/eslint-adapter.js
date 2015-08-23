@@ -1,13 +1,17 @@
-var CLIEngine = require('eslint').CLIEngine;
-var cli = new CLIEngine({
+var CLIEngine = require( 'eslint' ).CLIEngine;
+var cli = new CLIEngine( {
   useEslintrc: false,
-  rules: require('../../index').rules
-});
+  rules: require( '../../index' ).rules
+} );
 
-exports.executeOnText = function(text) {
-  return cli.executeOnText(text);
+exports.executeOnText = function( text ) {
+  return cli.executeOnText( text );
 };
 
-exports.executeOnFiles = function(files) {
-  return cli.executeOnFiles(files);
+exports.executeOnFiles = function( files ) {
+  return cli.executeOnFiles( files );
+};
+
+exports.getCompactFormatter = function() {
+  return cli.getFormatter( 'compact' );
 };

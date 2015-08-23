@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./test/*.spec.js",
-    "test": "mocha"
+    "test": "mocha -r ./test/support/support"
   },
   "author": "james@jamespamplin.com",
   "license": "MIT",
