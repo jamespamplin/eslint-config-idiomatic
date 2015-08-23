@@ -6,11 +6,20 @@ describe( '2. Beautiful Syntax', function() {
 
   describe( 'A. Parens, Braces, Linebreaks', function() {
 
-    it( 'should fail when cramped syntax', function() {
-      var report = eslint.executeOnText('while(true) i++;');
+    it( 'should fail when cramped syntax around keywords', function() {
+      var report = eslint.executeOnText('while( true ) i++;');
 
       expect(report.results[0].errorCount).to.equal(1);
       expect(report.results[0].messages[0].ruleId).to.equal('space-after-keywords');
+    } );
+
+
+    it( 'should fail when cramped syntax inside parentheses', function() {
+      var report = eslint.executeOnText('for (var i=0; i<100; i++) someIterativeFn();');
+
+      expect(report.results[0].errorCount).to.equal(2);
+      expect(report.results[0].messages[0].ruleId).to.equal('space-in-parens');
+      expect(report.results[0].messages[1].ruleId).to.equal('space-in-parens');
     } );
 
     it( 'should show no errors or warnings on idomatic source', function() {

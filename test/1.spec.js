@@ -27,7 +27,7 @@ describe( '1. Whitespace', function() {
     var report = eslint.executeOnText(
       'if ( true ) {\n' +
       '  var test = \'fail\';\n' +
-      '  if (true) {\n' +
+      '  if ( true ) {\n' +
       '\t  test = \'ok\'\n' +
       '  }\n' +
       '}\n'
