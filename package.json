@@ -4,11 +4,13 @@
   "description": "ESLint config for idomatic js style",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "james@jamespamplin.com",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "~1.2.1"
+    "eslint": "~1.2.1",
+    "chai": "~3.2.0",
+    "mocha": "~2.2.5"
   }
 }
