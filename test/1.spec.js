@@ -34,7 +34,7 @@ describe( '1. Whitespace', function() {
       '}\n'
     );
 
-    expect(report.results[0].errorCount).to.equal(1);
+    expect(report.results[0].errorCount).to.equal(2);
 
   } );
 
