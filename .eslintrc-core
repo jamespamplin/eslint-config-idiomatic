@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "rules": {
+    "indent": [2, 2],
+    "array-bracket-spacing": [2, "always"],
+    "block-spacing": [2, "always"],
+    "brace-style": [2, "1tbs", { "allowSingleLine": false }],
+    "curly": [2, "all"],
+    "func-names": [1],
+    "no-func-assign": [2],
+    "no-mixed-spaces-and-tabs": [2],
+    "one-var": [2, "always"],
+    "semi-spacing": [2, {"before": false, "after": true}],
+    "space-after-keywords": [2],
+    "space-before-blocks": [2],
+    "space-in-parens": [2, "always"],
+    "vars-on-top": [2]
+  }
+}
