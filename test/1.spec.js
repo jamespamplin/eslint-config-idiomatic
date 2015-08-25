@@ -45,4 +45,10 @@ describe( '1. Whitespace', function() {
     expect( src ).to.have.eslintErrors( [ 'no-trailing-spaces' ] );
   } );
 
+  it( 'should fail when mixed linebreak', function() {
+    var src = 'var test = 1;\r\n';
+
+    expect( src ).to.have.eslintErrors( [ 'linebreak-style' ] );
+  } );
+
 } );
