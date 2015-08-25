@@ -15,6 +15,7 @@
     "key-spacing": [2, { "beforeColon": false, "afterColon": true }],
     "linebreak-style": [2],
     "no-func-assign": [2],
+    "no-inline-comments": [2],
     "no-mixed-spaces-and-tabs": [2],
     "no-trailing-spaces": [2],
     "one-var": [2, "always"],
