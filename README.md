@@ -83,6 +83,19 @@ styleguide. These are outlined below.
 This config restricts to **2 spaces** soft indent and will error when
 indentation differs.
 
+### Single quotes
+Idiomatic does not enforce a particular style for quotes, but recommends
+consistency across the project. This config enforces `'single'` quotes, but to
+override to use `"double"` quotes in your project:
+```json
+{
+  "extends": "idiomatic",
+  "rules": {
+    "quotes": [2, "double"]
+  }
+}
+```
+
 ### Warn on missing function names
 Names on functions are recommended as they will show in stack traces, which aids
 debugging immensely. `eslint-config-idiomatic` will only issue a warning

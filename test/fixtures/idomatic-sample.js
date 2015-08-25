@@ -59,7 +59,7 @@ function style2A114() {
 // and keeps your declaration list free of clutter (also saves a few keystrokes)
 function style2B12() {
   // Good
-  var foo = "",
-    bar = "",
+  var foo = '',
+    bar = '',
     qux;
 }

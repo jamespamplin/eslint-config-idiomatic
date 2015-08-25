@@ -93,4 +93,11 @@ describe( '2. Beautiful Syntax', function() {
 
   } );
 
+  describe( 'E. Quotes', function() {
+    it( 'should fail when not using single quotes', function() {
+      var src = 'var first = "hi";\n';
+      expect( src ).to.have.eslintErrors( [ 'quotes' ] );
+    } );
+  } );
+
 } );
