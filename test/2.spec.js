@@ -42,6 +42,11 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'arrow-spacing', 'arrow-spacing' ] );
     } );
 
+    it( 'should fail when no spacing in computed properties', function() {
+      var src = 'global[\'foo\' ]';
+      expect( src ).to.have.eslintErrors( [ 'computed-property-spacing' ] );
+    } );
+
   } );
 
   describe( 'B. Assignments, Declarations, Functions ( Named, Expression, Constructor )', function() {

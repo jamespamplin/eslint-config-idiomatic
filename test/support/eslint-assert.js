@@ -19,7 +19,7 @@ function iterableEqual( a, b ) {
   }
 
   for ( ; i < a.length; i++ ) {
-    if ( a[i] !== b[i] ) {
+    if ( a[ i ] !== b[ i ] ) {
       match = false;
       break;
     }
@@ -36,7 +36,7 @@ Assertion.addMethod( 'eslintErrors', function assertEslintErrors( expectedRules 
   new Assertion( obj ).to.be.a( 'string' );
 
   report = eslint.executeOnText( obj );
-  results = report.results[0] || {};
+  results = report.results[ 0 ] || {};
 
   messages = eslint.formatReportResults( report.results );
   resultRules = results.messages.map( function( m ) {

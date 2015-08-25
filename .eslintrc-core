@@ -5,6 +5,7 @@
     "arrow-spacing": [2, { "before": true, "after": true }],
     "block-spacing": [2, "always"],
     "brace-style": [2, "1tbs", { "allowSingleLine": false }],
+    "computed-property-spacing": [2, "always"],
     "curly": [2, "all"],
     "func-names": [1],
     "indent": [2, 2],
