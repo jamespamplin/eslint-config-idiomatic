@@ -106,6 +106,16 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'space-return-throw-case' ] );
     } );
 
+    it( 'should fail when no space after unary word operator', function() {
+      var src = 'typeof!foo;\n';
+      expect( src ).to.have.eslintErrors( [ 'space-unary-ops' ] );
+    } );
+
+    it( 'should fail when space next to unary non-word operator', function() {
+      var src = 'var foo = foo ++;\n';
+      expect( src ).to.have.eslintErrors( [ 'space-unary-ops' ] );
+    } );
+
   } );
 
   describe( 'E. Quotes', function() {
