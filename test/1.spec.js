@@ -39,4 +39,10 @@ describe( '1. Whitespace', function() {
     expect( src ).to.have.eslintErrors( [ 'eol-last' ] );
   } );
 
+  it( 'should fail when trailing spaces at end of line', function() {
+    var src = 'var test = 1;  \n';
+
+    expect( src ).to.have.eslintErrors( [ 'no-trailing-spaces' ] );
+  } );
+
 } );
