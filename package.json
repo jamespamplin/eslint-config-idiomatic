@@ -1,8 +1,15 @@
 {
   "name": "eslint-config-idiomatic",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ESLint config for the idiomatic js style",
-  "keywords": ["idiomatic", "eslint", "eslintconfig", "styleguide", "style", "guide"],
+  "keywords": [
+    "idiomatic",
+    "eslint",
+    "eslintconfig",
+    "styleguide",
+    "style",
+    "guide"
+  ],
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./test/*.spec.js ./test/support/",
