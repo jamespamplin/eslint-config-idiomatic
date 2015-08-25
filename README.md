@@ -131,6 +131,10 @@ var foo = "bar",
   undef;
 ```
 
+## Contributing
+Issues and PRs more than welcome. Please ensure you have tests for your PRs, and
+that `npm test` passes.
+
 [ESLint]: http://eslint.org/
 [ESLint rules]: http://eslint.org/docs/rules/
 [shareable config]: http://eslint.org/docs/developer-guide/shareable-configs.html
