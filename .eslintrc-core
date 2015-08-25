@@ -28,6 +28,7 @@
     "space-before-function-paren": [2, "never"],
     "space-in-parens": [2, "always"],
     "space-infix-ops": [2],
+    "space-return-throw-case": [2],
     "vars-on-top": [2]
   }
 }

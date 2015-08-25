@@ -101,6 +101,11 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'space-infix-ops' ] );
     } );
 
+    it( 'should fail when no spacing around return statement', function() {
+      var src = 'function foo() {\n  return-1;\n}\n';
+      expect( src ).to.have.eslintErrors( [ 'space-return-throw-case' ] );
+    } );
+
   } );
 
   describe( 'E. Quotes', function() {
