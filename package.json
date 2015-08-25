@@ -5,7 +5,8 @@
   "keywords": ["idiomatic", "eslint", "eslintconfig", "styleguide", "style", "guide"],
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./test/*.spec.js",
+    "lint": "eslint ./test/*.spec.js ./test/support/",
+    "pretest": "npm run lint",
     "test": "mocha -r ./test/support/support"
   },
   "author": "James Pamplin <james@jamespamplin.com> (http://jamespamplin.com)",
