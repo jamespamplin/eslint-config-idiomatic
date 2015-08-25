@@ -28,7 +28,7 @@ describe( '2. Beautiful Syntax', function() {
     } );
 
     it( 'should fail when cramped syntax inside parentheses', function() {
-      var src = 'var i;\nfor (i=0; i<100; i++) {\n  someIterativeFn();\n}\n';
+      var src = 'var i;\nfor (i = 0; i < 100; i++) {\n  someIterativeFn();\n}\n';
       expect( src ).to.have.eslintErrors( [ 'space-in-parens', 'space-in-parens' ] );
     } );
 
@@ -38,7 +38,7 @@ describe( '2. Beautiful Syntax', function() {
     } );
 
     it( 'should fail when no spaces around arrow for arrow function', function() {
-      var src = 'const a = b=>b*2;\n';
+      var src = 'const a = b=>b * 2;\n';
       expect( src ).to.have.eslintErrors( [ 'arrow-spacing', 'arrow-spacing' ] );
     } );
 
@@ -94,6 +94,11 @@ describe( '2. Beautiful Syntax', function() {
       var src = 'var first;\nvar second = \'\';\n';
       expect( src ).to.have.eslintErrors( [ 'one-var' ] );
 
+    } );
+
+    it( 'should fail when no spacing around operators', function() {
+      var src = 'var foo = 1+1;\n';
+      expect( src ).to.have.eslintErrors( [ 'space-infix-ops' ] );
     } );
 
   } );
