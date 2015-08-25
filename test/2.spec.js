@@ -57,6 +57,11 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'key-spacing' ] );
     } );
 
+    it( 'should fail when spaces in function calls', function() {
+      var src = 'foo ( 1 );\n';
+      expect( src ).to.have.eslintErrors( [ 'no-spaced-func' ] );
+    } );
+
   } );
 
   describe( 'B. Assignments, Declarations, Functions ( Named, Expression, Constructor )', function() {
