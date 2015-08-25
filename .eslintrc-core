@@ -9,6 +9,7 @@
     "comma-style": [2, "last"],
     "computed-property-spacing": [2, "always"],
     "curly": [2, "all"],
+    "eol-last": [2],
     "func-names": [1],
     "indent": [2, 2],
     "no-func-assign": [2],
