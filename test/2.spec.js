@@ -52,6 +52,11 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'comma-spacing' ] );
     } );
 
+    it( 'should fail when spacing before object key', function() {
+      var src = 'var foo = { bar : 1 };\n';
+      expect( src ).to.have.eslintErrors( [ 'key-spacing' ] );
+    } );
+
   } );
 
   describe( 'B. Assignments, Declarations, Functions ( Named, Expression, Constructor )', function() {
