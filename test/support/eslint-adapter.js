@@ -1,7 +1,7 @@
 var CLIEngine = require( 'eslint' ).CLIEngine,
   cli = new CLIEngine( {
     useEslintrc: false,
-    configFile: '.eslintrc'
+    configFile: '.eslintrc-core'
   } );
 
 exports.executeOnText = function executeOnText( text ) {
