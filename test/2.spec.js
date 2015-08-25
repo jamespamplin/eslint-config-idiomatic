@@ -47,6 +47,11 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'computed-property-spacing' ] );
     } );
 
+    it( 'should fail when no spacing after a comma', function() {
+      var src = 'var a = [ \'foo\',\'bar\' ];';
+      expect( src ).to.have.eslintErrors( [ 'comma-spacing' ] );
+    } );
+
   } );
 
   describe( 'B. Assignments, Declarations, Functions ( Named, Expression, Constructor )', function() {
