@@ -67,6 +67,11 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'no-spaced-func' ] );
     } );
 
+    it( 'should fail when space before function parentheses', function() {
+      var src = 'function foo ( arg ) {\n}\n';
+      expect( src ).to.have.eslintErrors( [ 'space-before-function-paren' ] );
+    } );
+
   } );
 
   describe( 'B. Assignments, Declarations, Functions ( Named, Expression, Constructor )', function() {
