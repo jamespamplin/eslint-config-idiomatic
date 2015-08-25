@@ -37,6 +37,11 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'array-bracket-spacing', 'array-bracket-spacing' ] );
     } );
 
+    it( 'should fail when no spaces around arrow for arrow function', function() {
+      var src = 'const a = b=>b*2;';
+      expect( src ).to.have.eslintErrors( [ 'arrow-spacing', 'arrow-spacing' ] );
+    } );
+
   } );
 
   describe( 'B. Assignments, Declarations, Functions ( Named, Expression, Constructor )', function() {

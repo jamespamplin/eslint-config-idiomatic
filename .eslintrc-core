@@ -1,12 +1,13 @@
 {
   "root": true,
   "rules": {
-    "indent": [2, 2],
     "array-bracket-spacing": [2, "always"],
+    "arrow-spacing": [2, { "before": true, "after": true }],
     "block-spacing": [2, "always"],
     "brace-style": [2, "1tbs", { "allowSingleLine": false }],
     "curly": [2, "all"],
     "func-names": [1],
+    "indent": [2, 2],
     "no-func-assign": [2],
     "no-mixed-spaces-and-tabs": [2],
     "one-var": [2, "always"],
