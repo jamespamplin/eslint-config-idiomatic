@@ -57,6 +57,11 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'key-spacing' ] );
     } );
 
+    it( 'should fail when no spacing inside object braces', function() {
+      var src = 'var foo = {bar: 1};\n';
+      expect( src ).to.have.eslintErrors( [ 'object-curly-spacing', 'object-curly-spacing' ] );
+    } );
+
     it( 'should fail when spaces in function calls', function() {
       var src = 'foo ( 1 );\n';
       expect( src ).to.have.eslintErrors( [ 'no-spaced-func' ] );

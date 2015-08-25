@@ -19,6 +19,7 @@
     "no-mixed-spaces-and-tabs": [2],
     "no-spaced-func": [2],
     "no-trailing-spaces": [2],
+    "object-curly-spacing": [2, "always"],
     "one-var": [2, "always"],
     "semi-spacing": [2, {"before": false, "after": true}],
     "space-after-keywords": [2],
