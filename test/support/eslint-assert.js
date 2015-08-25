@@ -29,7 +29,7 @@ function iterableEqual( a, b ) {
 }
 
 
-Assertion.addMethod( 'eslintErrors', function ( expectedRules ) {
+Assertion.addMethod( 'eslintErrors', function assertEslintErrors( expectedRules ) {
   var obj = this._obj,
     report, results, messages, resultRules;
 
