@@ -117,33 +117,6 @@ var foo = function() {
 let foo = () => 'bar';
 ```
 
-## TODO
-
-### 2.A enforce end of block brace on new line
-
-```js
-// Expect error:
-while ( true ) {
-  i++; }
-
-// Good:
-while ( true ) {
-  i++;
-}
-```
-
-### 2.B enforce single variable declarations on a new line
-
-```js
-// Expect error:
-var foo = "bar", num = 1;
-
-// Good:
-var foo = "bar",
-  num = 1,
-  undef;
-```
-
 ## Contributing
 Issues and PRs more than welcome. Please ensure you have tests for your PRs, and
 that `npm test` passes.
