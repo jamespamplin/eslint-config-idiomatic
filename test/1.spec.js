@@ -11,7 +11,7 @@ describe( '1. Whitespace', function() {
 
   it( 'should fail when 2 spaces are not used for indentation', function() {
 
-    var src = 'var test;\nif ( true ) {\n\ttest = \'fail\'; }\n';
+    var src = 'var test;\nif ( true ) {\n\ttest = \'fail\';\n}\n';
 
     expect( src ).to.have.eslintErrors( [ 'indent' ] );
 
