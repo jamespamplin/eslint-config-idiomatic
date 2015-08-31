@@ -11,6 +11,11 @@
     "guide"
   ],
   "main": "index.js",
+  "files": [
+    ".eslintrc*",
+    "LICENSE",
+    "*.js"
+  ],
   "scripts": {
     "lint": "eslint ./test/*.spec.js ./test/support/",
     "pretest": "npm run lint",
