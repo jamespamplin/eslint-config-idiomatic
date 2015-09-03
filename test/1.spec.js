@@ -1,3 +1,5 @@
+/*eslint no-unused-expressions:0 */
+
 describe( '1. Whitespace', function() {
 
   it( 'should use 2 spaces for indent', function() {
