@@ -116,6 +116,16 @@ describe( '2. Beautiful Syntax', function() {
       expect( src ).to.have.eslintErrors( [ 'space-unary-ops' ] );
     } );
 
+    it( 'should fail when excess spacing in statements', function() {
+      var src = 'var foo  = 1;\n';
+      expect( src ).to.have.eslintErrors( [ 'no-multi-spaces' ] );
+    } );
+
+    it( 'should fail on multi-line member expression when "dot" is not on new line', function() {
+      var src = 'var foo = bar.\nmap( function mapBar() { } );\n';
+      expect( src ).to.have.eslintErrors( [ 'dot-location' ] );
+    } );
+
   } );
 
   describe( 'E. Quotes', function() {

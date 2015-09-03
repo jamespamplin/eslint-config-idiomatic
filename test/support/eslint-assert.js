@@ -14,7 +14,7 @@ function iterableEqual( a, b ) {
   var i = 0,
     match = true;
 
-  if ( a.length !==  b.length ) {
+  if ( a.length !== b.length ) {
     return false;
   }
 

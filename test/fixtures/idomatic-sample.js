@@ -63,3 +63,13 @@ function style2B12() {
     bar = '',
     qux;
 }
+
+// Ensure multi-line member expressions, the "dot" stays with the property and not the object
+function style2x() {
+  var foo = [ 'foo1', 'foo2' ];
+
+  return foo
+    .map( function fooMap( f ) {
+      return f + ' bar';
+    } );
+}

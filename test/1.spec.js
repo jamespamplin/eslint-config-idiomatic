@@ -31,7 +31,7 @@ describe( '1. Whitespace', function() {
       '  }\n' +
       '}\n';
 
-    expect( src ).to.have.eslintErrors( [ 'no-mixed-spaces-and-tabs', 'indent' ] );
+    expect( src ).to.have.eslintErrors( [ 'no-mixed-spaces-and-tabs', 'no-multi-spaces', 'indent' ] );
 
   } );
 
