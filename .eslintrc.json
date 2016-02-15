@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "extends": "./.eslintrc-es5.json",
+  "rules": {
+
+  }
+}

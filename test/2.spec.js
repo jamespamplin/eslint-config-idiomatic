@@ -1,3 +1,5 @@
+/*eslint func-names:0 */
+
 describe( '2. Beautiful Syntax', function() {
 
   describe( 'A. Parens, Braces, Linebreaks', function() {
@@ -14,7 +16,7 @@ describe( '2. Beautiful Syntax', function() {
 
     it( 'should fail when cramped syntax around keywords', function() {
       var src = 'while( true ) {\n  i++;\n}\n';
-      expect( src ).to.have.eslintErrors( [ 'space-after-keywords' ] );
+      expect( src ).to.have.eslintErrors( [ 'keyword-spacing' ] );
     } );
 
     it( 'should fail when no space before block', function() {
@@ -96,6 +98,11 @@ describe( '2. Beautiful Syntax', function() {
 
     } );
 
+    it( 'should fail when multiple variables on same line', function() {
+      var src = 'var first = 1, second = 2;\n';
+      expect( src ).to.have.eslintErrors( [ 'one-var-declaration-per-line' ] );
+    } );
+
     it( 'should fail when no spacing around operators', function() {
       var src = 'var foo = 1+1;\n';
       expect( src ).to.have.eslintErrors( [ 'space-infix-ops' ] );
@@ -103,7 +110,7 @@ describe( '2. Beautiful Syntax', function() {
 
     it( 'should fail when no spacing around return statement', function() {
       var src = 'function foo() {\n  return-1;\n}\n';
-      expect( src ).to.have.eslintErrors( [ 'space-return-throw-case' ] );
+      expect( src ).to.have.eslintErrors( [ 'keyword-spacing' ] );
     } );
 
     it( 'should fail when no space after unary word operator', function() {

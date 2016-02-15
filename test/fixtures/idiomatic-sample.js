@@ -35,7 +35,8 @@ function style2A112() {
 
 
 function style2A113() {
-  var prop, object = {};
+  var prop,
+    object = {};
 
   for ( prop in object ) {
     // statements

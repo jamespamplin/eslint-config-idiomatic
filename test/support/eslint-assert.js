@@ -31,7 +31,10 @@ function iterableEqual( a, b ) {
 
 Assertion.addMethod( 'eslintErrors', function assertEslintErrors( expectedRules ) {
   var obj = this._obj,
-    report, results, messages, resultRules;
+    report,
+    results,
+    messages,
+    resultRules;
 
   new Assertion( obj ).to.be.a( 'string' );
 
@@ -39,7 +42,7 @@ Assertion.addMethod( 'eslintErrors', function assertEslintErrors( expectedRules 
   results = report.results[ 0 ] || {};
 
   messages = eslint.formatReportResults( report.results );
-  resultRules = results.messages.map( function( m ) {
+  resultRules = results.messages.map( function extractRuleId( m ) {
     return m.ruleId;
   } );
 

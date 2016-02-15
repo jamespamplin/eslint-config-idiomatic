@@ -1,4 +1,5 @@
-var fs = require('fs');
-var path = require('path');
+/*eslint-env node */
 
-module.exports = JSON.parse(fs.readFileSync(path.join(__dirname, '.eslintrc-core')));
+var loadConfig = require( './lib/loader' ).loadConfig;
+
+module.exports = loadConfig( '.eslintrc-core.json' );

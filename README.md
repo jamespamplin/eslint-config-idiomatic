@@ -33,6 +33,8 @@ any project with minimal extra configuration necessary.
 npm install --save-dev eslint-config-idiomatic
 ```
 
+Note: use version `^1.0.0` for ESLint version `^1.x.x`.
+
 ## Usage
 In your `.eslintrc` file:
 ```json
