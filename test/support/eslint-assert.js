@@ -31,7 +31,10 @@ function iterableEqual( a, b ) {
 
 Assertion.addMethod( 'eslintErrors', function assertEslintErrors( expectedRules ) {
   var obj = this._obj,
-    report, results, messages, resultRules;
+    report,
+    results,
+    messages,
+    resultRules;
 
   new Assertion( obj ).to.be.a( 'string' );
 
