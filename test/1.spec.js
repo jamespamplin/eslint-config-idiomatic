@@ -1,4 +1,4 @@
-/*eslint no-unused-expressions:0 */
+/*eslint no-unused-expressions:0, func-names:0 */
 
 describe( '1. Whitespace', function() {
 

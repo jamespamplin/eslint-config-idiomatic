@@ -39,7 +39,7 @@ Assertion.addMethod( 'eslintErrors', function assertEslintErrors( expectedRules 
   results = report.results[ 0 ] || {};
 
   messages = eslint.formatReportResults( report.results );
-  resultRules = results.messages.map( function( m ) {
+  resultRules = results.messages.map( function extractRuleId( m ) {
     return m.ruleId;
   } );
 

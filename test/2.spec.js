@@ -1,3 +1,5 @@
+/*eslint func-names:0 */
+
 describe( '2. Beautiful Syntax', function() {
 
   describe( 'A. Parens, Braces, Linebreaks', function() {
