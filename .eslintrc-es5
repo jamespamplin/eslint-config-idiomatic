@@ -1,6 +1,9 @@
 {
   "root": true,
   "extends": "./.eslintrc-core",
+  "parserOptions": {
+    "ecmaVersion": 5
+  },
   "rules": {
     "comma-dangle": [2, "never"],
     "complexity": [1, 10],
