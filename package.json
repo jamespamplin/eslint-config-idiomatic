@@ -14,10 +14,11 @@
   "files": [
     ".eslintrc*",
     "LICENSE",
-    "*.js"
+    "*.js",
+    "lib/*"
   ],
   "scripts": {
-    "lint": "eslint ./test/*.spec.js ./test/support/",
+    "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "mocha -r ./test/support/support"
   },

@@ -1,6 +1,7 @@
-var fs = require('fs');
-var path = require('path');
+/*eslint-env node */
 
-module.exports = JSON.parse(fs.readFileSync(path.join(__dirname, '.eslintrc')));
+var loadConfig = require( './lib/loader' ).loadConfig;
 
-module.exports.extends = 'idiomatic/es5';
+module.exports = loadConfig( '.eslintrc' );
+
+module.exports[ 'extends' ] = 'idiomatic/es5';
