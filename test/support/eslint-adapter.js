@@ -1,7 +1,7 @@
 var CLIEngine = require( 'eslint' ).CLIEngine,
   cli = new CLIEngine( {
     useEslintrc: false,
-    configFile: '.eslintrc-core',
+    configFile: 'core.js',
     envs: [ 'es6' ],
     ignore: false
   } );
