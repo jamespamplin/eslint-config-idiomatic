@@ -14,7 +14,7 @@ describe( '2. Beautiful Syntax', function() {
 
     it( 'should fail when cramped syntax around keywords', function() {
       var src = 'while( true ) {\n  i++;\n}\n';
-      expect( src ).to.have.eslintErrors( [ 'space-after-keywords' ] );
+      expect( src ).to.have.eslintErrors( [ 'keyword-spacing' ] );
     } );
 
     it( 'should fail when no space before block', function() {
@@ -103,7 +103,7 @@ describe( '2. Beautiful Syntax', function() {
 
     it( 'should fail when no spacing around return statement', function() {
       var src = 'function foo() {\n  return-1;\n}\n';
-      expect( src ).to.have.eslintErrors( [ 'space-return-throw-case' ] );
+      expect( src ).to.have.eslintErrors( [ 'keyword-spacing' ] );
     } );
 
     it( 'should fail when no space after unary word operator', function() {
