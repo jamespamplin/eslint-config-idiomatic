@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": "./.eslintrc-core",
+  "extends": "./.eslintrc-core.json",
   "parserOptions": {
     "ecmaVersion": 5
   },

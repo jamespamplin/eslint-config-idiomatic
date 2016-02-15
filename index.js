@@ -2,6 +2,6 @@
 
 var loadConfig = require( './lib/loader' ).loadConfig;
 
-module.exports = loadConfig( '.eslintrc' );
+module.exports = loadConfig( '.eslintrc.json' );
 
 module.exports[ 'extends' ] = 'idiomatic/es5';

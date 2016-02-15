@@ -2,4 +2,4 @@
 
 var loadConfig = require( './lib/loader' ).loadConfig;
 
-module.exports = loadConfig( '.eslintrc-core' );
+module.exports = loadConfig( '.eslintrc-core.json' );
