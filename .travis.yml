@@ -1,7 +1,14 @@
 language: node_js
 node_js:
-  - "4.1"
-  - "4.0"
-  - "0.12"
-  - "0.10"
-  - "iojs"
+- '4.1'
+- '4.0'
+- '0.12'
+- '0.10'
+- iojs
+deploy:
+  provider: npm
+  email: james@jamespamplin.com
+  api_key:
+    secure: RVSLoc1sud8pr0VVq24tu90Twjbk7OAWHsFQ2x3NDBB0TwL+tojpIBsD+dgOVU/q5WOjvGbZ3Drqbw5a8qU8fOwMSlZpu83BkEoTF/qzszImrDDbLLmQQSiLZu82bLxydUnPXTAl6Q6hZOVZHPevzMJhehuNZWkZqm8hgTQXHrKp8xT3mAG1TAUqjSHEdArZkySLdbd9g7jLf71CXkuyrMogulEVeLxBNAjfHpQ0i/k1G3a7h3qcrcdTZPjb12ixMZz7DBDeIFaGezr9ArLmpSupMOYsXf5xB1NfeRw7k7kAG+A9VGJ6cy5GC+CMSOUn6irjgGBPbymQKA2pk//1SpbONskDJXBzRZhsq3f+MIMXAAZGffe1cSlaJFOkZUlThrLTIJ3aLaEo8g/TTRxpkvPPLOCY2DzTuowz2b1Llu08cBpVC7KyGORgJjyjcq2QMp/iMsO3nWtLy3kbFpiTlIkTaWOTWy3+A9zdFDt39Dz2jS8RpaeLg0zGMjQc3WUz3N+Trv9KvgSl9MZ8oOdQilG/dLYvnIgn9/+z7bclAoawvniiTtWnUbak2eXncCYK98V7pD5VKwsMNPvBEmcfVGRAHkxDlVsWWp6In+Lt76mDVXbCmlTSjhz9tAu9gBCyNdmHIUs8XcJ2YSPeJaeRGdmDnwJanYv0pSotcKIcehw=
+  on:
+    tags: true
