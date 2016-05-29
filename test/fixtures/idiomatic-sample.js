@@ -72,5 +72,5 @@ function style2x() {
   return foo
     .map( function fooMap( f ) {
       return f + ' bar';
-    } );
+    });
 }

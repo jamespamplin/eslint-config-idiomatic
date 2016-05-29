@@ -19,7 +19,7 @@ function iterableEqual( a, b ) {
   }
 
   for ( ; i < a.length; i++ ) {
-    if ( a[ i ] !== b[ i ] ) {
+    if ( a[ i ] !== b[ i ]) {
       match = false;
       break;
     }
@@ -44,7 +44,7 @@ Assertion.addMethod( 'eslintErrors', function assertEslintErrors( expectedRules 
   messages = eslint.formatReportResults( report.results );
   resultRules = results.messages.map( function extractRuleId( m ) {
     return m.ruleId;
-  } );
+  });
 
   this.assert(
     report.errorCount > 0 && Array.isArray( results.messages ) &&
@@ -55,4 +55,4 @@ Assertion.addMethod( 'eslintErrors', function assertEslintErrors( expectedRules 
     resultRules,
     true
   );
-} );
+});

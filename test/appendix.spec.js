@@ -6,7 +6,7 @@ describe( 'Appendix', function() {
       var src = 'var first = 1\n' +
       '  , second = 2;\n';
 
-      expect( src ).to.have.eslintErrors( [ 'comma-style' ] );
-    } );
-  } );
-} );
+      expect( src ).to.have.eslintErrors([ 'comma-style' ]);
+    });
+  });
+});
