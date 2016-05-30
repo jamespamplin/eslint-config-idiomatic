@@ -6,7 +6,7 @@ describe( '2. Beautiful Syntax', function() {
 
     it( 'should fail when block does not start on new line', function() {
       var src = 'while ( true ) { i++; }\n';
-      expect( src ).to.have.eslintErrors( [ 'brace-style' ] );
+      expect( src ).to.have.eslintErrors( [ 'brace-style', 'brace-style' ] );
     } );
 
     it( 'should fail on control statement without braces', function() {

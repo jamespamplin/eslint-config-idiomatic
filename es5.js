@@ -4,4 +4,4 @@ var loadConfig = require( './lib/loader' ).loadConfig;
 
 module.exports = loadConfig( '.eslintrc-es5.json' );
 
-module.exports[ 'extends' ] = 'idiomatic/core';
+module.exports[ 'extends' ] = 'idiomatic/core+recommended';
