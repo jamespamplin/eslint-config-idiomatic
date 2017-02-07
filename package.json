@@ -25,10 +25,11 @@
   "author": "James Pamplin <james@jamespamplin.com> (http://jamespamplin.com)",
   "repository": "https://github.com/jamespamplin/eslint-config-idiomatic.git",
   "license": "MIT",
-  "dependencies": {
-    "eslint": "^2.13.1"
+  "peerDependencies": {
+    "eslint": "2.x"
   },
   "devDependencies": {
+    "eslint": "^2.13.1",
     "chai": "^3.2.0",
     "mocha": "^2.5.3"
   }
