@@ -36,7 +36,11 @@ any project with minimal extra configuration necessary.
 npm install --save-dev eslint-config-idiomatic
 ```
 
-Note: use version `^1.0.0` for ESLint version `^1.x.x`.
+Note:
+
+ * use version `^2.0.0` for ESLint version `^2.x.x`.
+ * use version `^1.0.0` for ESLint version `^1.x.x`.
+
 
 ## Usage
 In your `.eslintrc` file:
@@ -75,7 +79,7 @@ potential issues in your code. To restrict to idiomatic code style only, extend
 {
   "extends": "idiomatic/core",
   "rules": {
-    // my additional linting rules
+    "...": "my additional linting rules"
   }
 }
 ```
