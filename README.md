@@ -1,6 +1,9 @@
 # eslint-config-idiomatic
+
 [![NPM](https://img.shields.io/npm/v/eslint-config-idiomatic.svg)](https://www.npmjs.com/package/eslint-config-idiomatic)
 [![Build](https://img.shields.io/travis/jamespamplin/eslint-config-idiomatic.svg)](https://travis-ci.org/jamespamplin/eslint-config-idiomatic)
+[![Greenkeeper badge](https://badges.greenkeeper.io/jamespamplin/eslint-config-idiomatic.svg)](https://greenkeeper.io/)
+
 
 > An [ESLint][] [shareable config] for the [idiomatic js] coding style.
 
