@@ -25,6 +25,9 @@
   "author": "James Pamplin <james@jamespamplin.com> (http://jamespamplin.com)",
   "repository": "https://github.com/jamespamplin/eslint-config-idiomatic.git",
   "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
   "peerDependencies": {
     "eslint": "2.x"
   },
