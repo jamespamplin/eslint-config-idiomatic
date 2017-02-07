@@ -1,10 +1,7 @@
 {
   "root": true,
-  "extends": "./core+recommended.js",
+  "extends": "./core.js",
   "parserOptions": {
     "ecmaVersion": 6
-  },
-  "rules": {
-
   }
 }

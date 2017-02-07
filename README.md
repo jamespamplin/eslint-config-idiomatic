@@ -50,6 +50,13 @@ In your `.eslintrc` file:
 }
 ```
 
+To use with ESLint's recommended ruleset:
+```json
+{
+  "extends": [ "eslint:recommended", "idiomatic" ]
+}
+```
+
 ### Overrides
 You can easily override rules in your own `.eslintrc` config. For example, to
 use 4 space indents instead of 2:
