@@ -136,11 +136,26 @@ describe( '2. Beautiful Syntax', function() {
   });
 
   describe( 'C. Exceptions', function() {
-    it( 'function callbacks', function() {
+    // FIXME still cannot remote space before function keyword
+    it( 'should not have spaces around function callbacks', function() {
       var src =
         'foo( function cb() {\n' +
         '  // thing\n' +
         '})\n';
+      expect( src ).to.not.have.eslintErrors;
+    });
+
+    it( 'should not have spaces around arrow function callbacks', function() {
+      var src =
+        'foo(() => {\n' +
+        '  // thing\n' +
+        '});\n';
+      expect( src ).to.not.have.eslintErrors;
+    });
+
+    it( 'should not have spaces between array definitions', function() {
+      var src =
+        'foo([ \'alpha\', \'beta\' ]);\n';
       expect( src ).to.not.have.eslintErrors;
     });
   });
