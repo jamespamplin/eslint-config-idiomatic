@@ -7,13 +7,13 @@ describe( '3. Type Checking', function() {
     it( 'should not fail when comparing against null', function() {
       var src = 'variable == null;\n';
       expect( src ).to.not.have.eslintErrors;
-    } );
+    });
 
     it( 'should not fail when comparing against null (strong type equal)', function() {
       var src = 'variable === null;\n';
       expect( src ).to.not.have.eslintErrors;
-    } );
+    });
 
-  } );
+  });
 
-} );
+});
