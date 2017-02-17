@@ -11,7 +11,7 @@ Ensure your source code adheres to the [idiomatic js] coding style by linting
 your code with [ESLint]. Hook ESLint into your editor and build pipeline for
 maximum effect.
 
-> :memo: ** Note for upgrades from v2.x:** this config no longer extends `eslint:recommended`. See [Usage](#usage).
+> :memo: Note for upgrades from v2.x: this config no longer extends `eslint:recommended`. See [Usage](#usage).
 
 **Idiomatic example:**
 ```js
