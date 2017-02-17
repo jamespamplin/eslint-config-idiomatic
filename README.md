@@ -11,10 +11,13 @@ Ensure your source code adheres to the [idiomatic js] coding style by linting
 your code with [ESLint]. Hook ESLint into your editor and build pipeline for
 maximum effect.
 
+> :memo: ** Note for upgrades from v2.x:** this config no longer extends `eslint:recommended`. See [Usage](#usage).
+
 **Idiomatic example:**
 ```js
 const thing = 'Hello',
-  another = 'World';
+  another = 'World',
+  total = count([ 1, 2, 3]);
 
 function idiomatic( arg ) {
   let out = 'Bye';
@@ -27,10 +30,6 @@ function idiomatic( arg ) {
 }
 ```
 
-`eslint-config-idiomatic` also includes extra recommended linting rules to
-prevent potential issues in your code. This is so that it may be dropped into
-any project with minimal extra configuration necessary.
-
 ## Install
 ```
 npm install --save-dev eslint-config-idiomatic
@@ -38,6 +37,7 @@ npm install --save-dev eslint-config-idiomatic
 
 Note:
 
+ * use version `^3.0.0` for ESLint version `^3.x.x`.
  * use version `^2.0.0` for ESLint version `^2.x.x`.
  * use version `^1.0.0` for ESLint version `^1.x.x`.
 
@@ -49,6 +49,18 @@ In your `.eslintrc` file:
   "extends": "idiomatic"
 }
 ```
+
+To use with ESLint's recommended ruleset:
+```json
+{
+  "extends": [
+    "eslint:recommended",
+    "idiomatic"
+  ]
+}
+```
+
+Note: `eslint:recommended` should be listed first.
 
 ### Overrides
 You can easily override rules in your own `.eslintrc` config. For example, to
@@ -71,18 +83,6 @@ in your `.eslintrc`:
 }
 ```
 
-### Idiomatic style only
-`eslint-config-idiomatic` includes recommended [ESLint rules] to avoid other
-potential issues in your code. To restrict to idiomatic code style only, extend
-`idiomatic/core` in your `.eslintrc`:
-```json
-{
-  "extends": "idiomatic/core",
-  "rules": {
-    "...": "my additional linting rules"
-  }
-}
-```
 
 ## Slight differences
 The rules enforces by this config may differ slightly from the idiomatic js
