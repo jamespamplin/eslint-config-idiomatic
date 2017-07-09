@@ -129,7 +129,7 @@ describe( '2. Beautiful Syntax', function() {
     });
 
     it( 'should fail on multi-line member expression when "dot" is not on new line', function() {
-      var src = 'var foo = bar.\nmap( function mapBar() { });\n';
+      var src = 'var foo = bar.\n  map( function mapBar() { });\n';
       expect( src ).to.have.eslintErrors([ 'dot-location' ]);
     });
 
