@@ -29,10 +29,10 @@
     "node": ">=4"
   },
   "peerDependencies": {
-    "eslint": "3.x"
+    "eslint": "^4.1.0"
   },
   "devDependencies": {
-    "eslint": "^3.15.0",
+    "eslint": "^4.1.0",
     "chai": "^4.0.1",
     "mocha": "^3.2.0"
   }
